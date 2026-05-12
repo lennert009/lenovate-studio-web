@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { projects } from "@/data/content";
 import { ArrowUpRight } from "lucide-react";
 
@@ -24,6 +25,7 @@ const Projecten = () => {
 
       <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
         <div className="container-tight">
+          <Breadcrumbs dark />
           <span className="eyebrow">Portfolio</span>
           <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
             Werk waar we <span className="gradient-text">trots op zijn</span>.

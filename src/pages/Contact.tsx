@@ -2,6 +2,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -61,6 +62,7 @@ const Contact = () => {
 
       <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
         <div className="container-tight">
+          <Breadcrumbs dark />
           <span className="eyebrow">Contact</span>
           <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
             Laten we <span className="gradient-text">praten</span>.
