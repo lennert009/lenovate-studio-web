@@ -31,6 +31,13 @@ const BlogDetail = () => {
 
       <section className="ink-section pt-36 pb-16" style={{ background: "var(--gradient-hero)" }}>
         <div className="container-tight max-w-3xl">
+          <Breadcrumbs
+            dark
+            customSegments={[
+              { label: "Blog", to: "/blog" },
+              { label: post.title },
+            ]}
+          />
           <Link to="/blog" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink-foreground text-sm mb-8">
             <ArrowLeft className="h-4 w-4" /> Alle artikels
           </Link>
