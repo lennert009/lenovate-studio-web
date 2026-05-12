@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { projects } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
@@ -34,6 +35,13 @@ const ProjectDetail = () => {
 
       <section className="ink-section pt-36 pb-16" style={{ background: "var(--gradient-hero)" }}>
         <div className="container-tight">
+          <Breadcrumbs
+            dark
+            customSegments={[
+              { label: "Projecten", to: "/projecten" },
+              { label: project.title },
+            ]}
+          />
           <Link to="/projecten" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink-foreground text-sm mb-8">
             <ArrowLeft className="h-4 w-4" /> Alle projecten
           </Link>

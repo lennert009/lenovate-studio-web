@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight, Globe, Search, ShoppingCart, Wrench, Palette } from "lucide-react";
 
@@ -47,6 +48,7 @@ const Diensten = () => (
 
     <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
       <div className="container-tight">
+        <Breadcrumbs dark />
         <span className="eyebrow">Diensten</span>
         <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
           Een volledig pakket om <span className="gradient-text">online te winnen</span>.

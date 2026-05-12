@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { faqs } from "@/data/content";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -13,6 +14,7 @@ const FAQ = () => (
 
     <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
       <div className="container-tight">
+        <Breadcrumbs dark />
         <span className="eyebrow">FAQ</span>
         <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
           Veelgestelde <span className="gradient-text">vragen</span>.

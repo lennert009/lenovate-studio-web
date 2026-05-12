@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { posts } from "@/data/content";
 
 const Blog = () => (
@@ -13,6 +14,7 @@ const Blog = () => (
 
     <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
       <div className="container-tight">
+        <Breadcrumbs dark />
         <span className="eyebrow">Blog</span>
         <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
           Inzichten over <span className="gradient-text">webdesign</span> & SEO.

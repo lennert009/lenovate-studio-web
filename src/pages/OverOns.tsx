@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Heart, Lightbulb, Rocket } from "lucide-react";
 
@@ -14,6 +15,7 @@ const OverOns = () => (
 
     <section className="ink-section pt-36 pb-20" style={{ background: "var(--gradient-hero)" }}>
       <div className="container-tight">
+        <Breadcrumbs dark />
         <span className="eyebrow">Over ons</span>
         <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold max-w-3xl leading-[1.05]">
           We bouwen websites die <span className="gradient-text">werken</span>.
