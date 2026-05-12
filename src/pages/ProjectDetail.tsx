@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { projects } from "@/data/content";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
