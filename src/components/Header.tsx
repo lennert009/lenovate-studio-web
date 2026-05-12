@@ -5,11 +5,13 @@ import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/diensten", label: "Diensten" },
   { to: "/projecten", label: "Projecten" },
   { to: "/blog", label: "Blog" },
   { to: "/over-ons", label: "Over ons" },
   { to: "/faq", label: "FAQ" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export const Header = () => {
