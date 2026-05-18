@@ -22,10 +22,6 @@ export interface Project {
   tech: string[];
   url?: string;
   featured?: boolean;
-  stats?: { label: string; value: string }[];
-  testimonial?: { name: string; company: string; quote: string };
-  gallery?: string[];
-  timeline?: { step: string; title: string; description: string }[];
 }
 
 export const projects: Project[] = [
@@ -37,30 +33,12 @@ export const projects: Project[] = [
     year: "2024",
     cover: project5,
     excerpt: "Lokale dienstensite met sterke SEO voor elektrowerken in de regio.",
-    challenge: "Onvindbaar in Google voor lokale zoektermen. De vorige website had geen mobiele versie en laadde in meer dan 8 seconden.",
-    solution: "Service-pagina's per gemeente, technische SEO, snelle paginatijden onder 1 seconde en een volledig responsive design.",
-    result: "Top-3 rankings op 14 commerciële kernwoorden en een verdubbeling van het aantal offerteaanvragen.",
-    tech: ["Local SEO", "Schema.org", "PageSpeed", "Responsive Design", "Analytics"],
+    challenge: "Onvindbaar in Google voor lokale zoektermen.",
+    solution: "Service-pagina's per gemeente, technische SEO, snelle paginatijden onder 1 seconde.",
+    result: "Top-3 rankings op 14 commerciële kernwoorden.",
+    tech: ["Local SEO", "Schema.org", "PageSpeed"],
     url: "https://example.com",
     featured: true,
-    stats: [
-      { label: "Snelheid", value: "0.8s" },
-      { label: "Top-3 keywords", value: "14" },
-      { label: "Meer aanvragen", value: "+112%" },
-      { label: "Mobiel verkeer", value: "68%" },
-    ],
-    testimonial: {
-      name: "Bart Foubert",
-      company: "Elektriciteitswerken Foubert",
-      quote: "Sinds de nieuwe site sta ik op pagina 1 in Google voor alle gemeentes waar ik werk. De investering had ik binnen twee maanden terugverdiend.",
-    },
-    gallery: [project3, project4, project6],
-    timeline: [
-      { step: "01", title: "Intake & Strategie", description: "Gesprek met de klant, analyse van bestaande site, concurrentieonderzoek en doelstellingen bepaald." },
-      { step: "02", title: "Design", description: "Wireframes en visueel ontwerp in de huisstijl van Foubert, met focus op duidelijke diensten en contactkanalen." },
-      { step: "03", title: "Development", description: "Supersnelle statische site gebouwd met moderne technologie, volledig SEO-geoptimaliseerd." },
-      { step: "04", title: "Launch & SEO", description: "Livegang, Google Business koppeling, lokale citaties en maandelijkse SEO-monitoring." },
-    ],
   },
   {
     slug: "gedopt-gardening",
@@ -70,30 +48,12 @@ export const projects: Project[] = [
     year: "2025",
     cover: project1,
     excerpt: "Een frisse, organische website voor een tuinaanleg- en onderhoudsbedrijf.",
-    challenge: "Geen online aanwezigheid en klanten via enkel mond-tot-mondreclame. Seizoensgebonden pieken waren moeilijk op te vangen.",
-    solution: "Aards design met fotografie-vriendelijke layouts, seizoensgebonden content en lokale SEO voor tuinwerken in de regio.",
-    result: "45% van nieuwe aanvragen komt nu via de website, seizoenspiek perfect opgevangen met geautomatiseerde content.",
-    tech: ["React", "TailwindCSS", "Lokale SEO", "CMS", "Fotografie-optimalisatie"],
+    challenge: "Geen online aanwezigheid en klanten via enkel mond-tot-mondreclame.",
+    solution: "Aards design met fotografie-vriendelijke layouts, seizoensgebonden content en lokale SEO voor tuinwerken.",
+    result: "45% van nieuwe aanvragen komt nu via de website, seizoenspiek perfect opgevangen.",
+    tech: ["React", "TailwindCSS", "Lokale SEO", "CMS"],
     url: "https://example.com",
     featured: true,
-    stats: [
-      { label: "Website leads", value: "45%" },
-      { label: "Seizoenspiek", value: "3x" },
-      { label: "Pagina's", value: "24" },
-      { label: "Foto's", value: "80+" },
-    ],
-    testimonial: {
-      name: "Dries Gedopt",
-      company: "Gedopt Gardening",
-      quote: "De site voelt aan als ons bedrijf: groen, fris en persoonlijk. En we krijgen nu echt aanvragen via het contactformulier.",
-    },
-    gallery: [project2, project5, project3],
-    timeline: [
-      { step: "01", title: "Intake & Fotografie", description: "Strategie bepaald en professionele fotoshoot gepland op diverse tuinprojecten." },
-      { step: "02", title: "Design", description: "Organisch, warm design met grote beelden en aardse kleuren die de natuur weerspiegelen." },
-      { step: "03", title: "Development", description: "CMS-gekoppelde website zodat het team zelf projecten en seizoenscontent kan bijwerken." },
-      { step: "04", title: "Lancering", description: "Soft launch met lokale advertenties, gevolgd door SEO-traject voor tuinwerken in de regio." },
-    ],
   },
   {
     slug: "ftf-electrix",
@@ -103,30 +63,12 @@ export const projects: Project[] = [
     year: "2025",
     cover: project2,
     excerpt: "Professionele website voor een elektrotechnisch installatiebedrijf.",
-    challenge: "De oude site was verouderd, niet mobielvriendelijk en trok nauwelijks commerciële aanvragen.",
+    challenge: "De oude site was verouderd en trok nauwelijks commerciële aanvragen.",
     solution: "Moderne corporate identiteit, duidelijke dienstenpagina's en SEO voor industriële en residentiële elektrotechniek.",
-    result: "3x zoveel offerteaanvragen binnen 2 maanden na lancering, met een lagere bounce rate.",
-    tech: ["React", "SEO copy", "Schema.org", "Form automation", "Corporate design"],
+    result: "3x zoveel offerteaanvragen binnen 2 maanden na lancering.",
+    tech: ["React", "SEO copy", "Schema.org", "Form automation"],
     url: "https://example.com",
     featured: true,
-    stats: [
-      { label: "Meer aanvragen", value: "3x" },
-      { label: "Bounce rate", value: "-40%" },
-      { label: "Mobile score", value: "98/100" },
-      { label: "Pagina's", value: "18" },
-    ],
-    testimonial: {
-      name: "Filip Terwingen",
-      company: "FTF Electrix",
-      quote: "Eindelijk een website die er professioneel uitziet én werkt. We krijgen nu zelfs aanvragen van bedrijven die ons via Google vonden.",
-    },
-    gallery: [project4, project1, project6],
-    timeline: [
-      { step: "01", title: "Analyse", description: "Bestaande site geaudit, concurrentieanalyse en doelgroeponderzoek voor B2B en residentiële klanten." },
-      { step: "02", title: "Design", description: "Strak, vertrouwenwekkend corporate design met duidelijke dienstenstructuur en call-to-actions." },
-      { step: "03", title: "Content", description: "SEO-copy geschreven voor industriële en residentiële elektrotechniek, inclusief FAQ-sectie." },
-      { step: "04", title: "Launch", description: "Livegang met geautomatiseerde offerteformulieren en koppeling aan het CRM-systeem van de klant." },
-    ],
   },
 ];
 
