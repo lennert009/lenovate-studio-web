@@ -22,10 +22,6 @@ export interface Project {
   tech: string[];
   url?: string;
   featured?: boolean;
-  stats?: { label: string; value: string }[];
-  testimonial?: { name: string; company: string; quote: string };
-  gallery?: string[];
-  timeline?: { step: string; title: string; description: string }[];
 }
 
 export const projects: Project[] = [
