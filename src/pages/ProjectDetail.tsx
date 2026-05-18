@@ -2,9 +2,10 @@ import { Link, useParams } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { LaptopMockup } from "@/components/LaptopMockup";
 import { projects } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowUpRight, ExternalLink, Quote, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -33,8 +34,7 @@ const ProjectDetail = () => {
         canonicalPath={`/projecten/${project.slug}`}
       />
 
-      {/* Hero */}
-      <section className="ink-section pt-36 pb-16" style={{ background: "var(--gradient-hero)" }}>
+      <section className="ink-section pt-36 pb-32" style={{ background: "var(--gradient-hero)" }}>
         <div className="container-tight">
           <Breadcrumbs
             dark
@@ -67,20 +67,13 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Cover image */}
-      <section className="-mt-10">
+      {/* Laptop showcase */}
+      <section className="-mt-24 md:-mt-28">
         <div className="container-tight">
-          <img
-            src={project.cover}
-            alt={project.title}
-            width={1024}
-            height={768}
-            className="w-full rounded-2xl border border-border shadow-elegant"
-          />
+          <LaptopMockup src={project.cover} alt={`${project.title} — website preview`} />
         </div>
       </section>
 
-      {/* Challenge / Solution / Result */}
       <section className="section-pad">
         <div className="container-tight grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-10">
@@ -123,98 +116,23 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      {project.stats && (
-        <section className="section-pad bg-surface-soft">
-          <div className="container-tight">
-            <h2 className="font-display text-3xl font-bold mb-10">Cijfers die spreken</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {project.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl bg-card border border-border p-7 text-center"
-                >
-                  <p className="font-display text-4xl font-bold gradient-text">{stat.value}</p>
-                  <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Gallery */}
-      {project.gallery && project.gallery.length > 0 && (
-        <section className="section-pad">
-          <div className="container-tight">
-            <h2 className="font-display text-3xl font-bold mb-10">Beelden van het project</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {project.gallery.map((img, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl overflow-hidden border border-border shadow-elegant"
-                >
-                  <img
-                    src={img}
-                    alt={`${project.title} — afbeelding ${i + 1}`}
-                    loading="lazy"
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Timeline */}
-      {project.timeline && project.timeline.length > 0 && (
-        <section className="section-pad bg-surface-soft">
-          <div className="container-tight">
-            <h2 className="font-display text-3xl font-bold mb-10">Ons proces</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {project.timeline.map((item) => (
-                <div
-                  key={item.step}
-                  className="relative rounded-2xl bg-card border border-border p-7"
-                >
-                  <span className="inline-block rounded-full bg-gradient-accent text-white text-xs font-bold px-3 py-1 mb-4">
-                    Stap {item.step}
-                  </span>
-                  <h3 className="font-display text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Testimonial */}
-      {project.testimonial && (
-        <section className="section-pad">
-          <div className="container-tight">
-            <div className="relative rounded-2xl bg-gradient-hero border border-border p-10 md:p-14">
-              <Quote className="h-10 w-10 text-primary opacity-30 mb-4" />
-              <blockquote className="font-display text-2xl md:text-3xl font-bold leading-snug max-w-4xl">
-                {project.testimonial.quote}
-              </blockquote>
-              <div className="mt-8 flex items-center gap-4">
-                <div className="h-12 w-12 rounded-full bg-gradient-accent flex items-center justify-center text-white font-bold text-lg">
-                  {project.testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold">{project.testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{project.testimonial.company}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Next projects */}
+      {/* Extra full-width screenshot in laptop */}
       <section className="section-pad bg-surface-soft">
+        <div className="container-tight">
+          <div className="max-w-2xl mb-12">
+            <span className="eyebrow">In actie</span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold">
+              Zo ziet de website eruit
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Een blik op de live website van {project.client} — strak, snel en gemaakt om te converteren.
+            </p>
+          </div>
+          <LaptopMockup src={project.cover} alt={`${project.title} — extra preview`} />
+        </div>
+      </section>
+
+      <section className="section-pad">
         <div className="container-tight">
           <h2 className="font-display text-3xl font-bold mb-10">Volgende projecten</h2>
           <div className="grid md:grid-cols-2 gap-6">
