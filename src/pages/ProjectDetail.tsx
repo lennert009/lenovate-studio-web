@@ -116,21 +116,60 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Extra full-width screenshot in laptop */}
+      {/* Highlights & illustraties */}
       <section className="section-pad bg-surface-soft">
         <div className="container-tight">
-          <div className="max-w-2xl mb-12">
-            <span className="eyebrow">In actie</span>
+          <div className="max-w-2xl mb-14">
+            <span className="eyebrow">Onder de motorkap</span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold">
-              Zo ziet de website eruit
+              Wat deze website voor {project.client} doet
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Een blik op de live website van {project.client} — strak, snel en gemaakt om te converteren.
+              Een combinatie van strak design, snelle techniek en doordachte SEO — gebouwd om bezoekers
+              om te zetten in klanten.
             </p>
           </div>
-          <LaptopMockup src={project.cover} alt={`${project.title} — extra preview`} />
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: Gauge, title: "Bliksemsnel", text: "Laadtijden onder 1 seconde, 95+ PageSpeed score op mobiel en desktop." },
+              { icon: Search, title: "SEO ingebouwd", text: "Schema.org, technische SEO en content per dienst — vindbaar in Google." },
+              { icon: Smartphone, title: "Mobile-first", text: "Ontworpen vanaf het kleinste scherm. Vlekkeloos op elk device." },
+              { icon: Palette, title: "Eigen huisstijl", text: "Visuele identiteit doorgetrokken in elk detail — kleur, type en ritme." },
+              { icon: ShieldCheck, title: "Onderhoudsvrij", text: "Automatische back-ups, security updates en monitoring inbegrepen." },
+              { icon: Sparkles, title: "Conversie-gericht", text: "Heldere call-to-actions en formulieren die effectief leads opleveren." },
+            ].map(({ icon: Icon, title, text }) => (
+              <div key={title} className="rounded-2xl bg-card border border-border p-7 hover:shadow-elegant transition-shadow">
+                <div className="h-11 w-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="font-display text-lg font-bold mb-2">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Illustratie strook */}
+          <div className="mt-16 grid md:grid-cols-5 gap-4">
+            <div className="md:col-span-3 rounded-2xl overflow-hidden aspect-[4/3] md:aspect-auto md:min-h-[320px]">
+              <img src={project.cover} alt={`${project.title} — sfeerbeeld 1`} loading="lazy" className="h-full w-full object-cover" />
+            </div>
+            <div className="md:col-span-2 grid grid-rows-2 gap-4">
+              <div className="rounded-2xl overflow-hidden">
+                <img src={project.cover} alt={`${project.title} — sfeerbeeld 2`} loading="lazy" className="h-full w-full object-cover object-bottom" />
+              </div>
+              <div className="rounded-2xl bg-ink text-ink-foreground p-7 flex flex-col justify-between">
+                <p className="eyebrow text-ink-muted">In één zin</p>
+                <p className="font-display text-xl md:text-2xl font-bold leading-snug">
+                  "{project.excerpt}"
+                </p>
+                <p className="text-sm text-ink-muted">— {project.client}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
 
       <section className="section-pad">
         <div className="container-tight">
