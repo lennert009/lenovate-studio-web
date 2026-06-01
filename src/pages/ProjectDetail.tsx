@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LaptopMockup } from "@/components/LaptopMockup";
 import { projects } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ExternalLink, Sparkles, Gauge, Search, Smartphone, Palette, ShieldCheck } from "lucide-react";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
