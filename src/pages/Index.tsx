@@ -27,7 +27,7 @@ const Home = () => {
               <h1 className="mt-6 font-display text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05]">
                 Webdesign met
                 <br />
-                <span className="gradient-text">impact.</span> 🚀
+                <span className="gradient-text">impact.</span>
               </h1>
               <p className="mt-7 max-w-xl text-lg text-ink-muted leading-relaxed">
                 We bouwen websites die er niet alleen scherp uitzien, maar ook écht
