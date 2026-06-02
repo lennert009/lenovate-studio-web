@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Heart, Lightbulb, Rocket } from "lucide-react";
+import portraitFounder from "@/assets/portrait-founder.jpg";
 
 const OverOns = () => (
   <Layout>
@@ -40,6 +41,41 @@ const OverOns = () => (
             <p className="mt-3 text-muted-foreground">{s.l}</p>
           </div>
         ))}
+      </div>
+    </section>
+
+    <section className="section-pad">
+      <div className="container-tight grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative">
+          <div className="absolute -inset-6 bg-gradient-accent opacity-20 blur-3xl rounded-full" />
+          <img
+            src={portraitFounder}
+            alt="Oprichter van Lenovate Studio"
+            width={1024}
+            height={1280}
+            loading="lazy"
+            className="relative rounded-2xl shadow-elegant border border-border w-full object-cover aspect-[4/5]"
+          />
+        </div>
+        <div>
+          <span className="eyebrow">Maak kennis</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">
+            Hallo, ik ben de <span className="gradient-text">oprichter</span>.
+          </h2>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            Al meer dan vier jaar bouw ik websites voor ondernemers die niet alleen
+            een mooi visitekaartje willen, maar een digitaal platform dat écht
+            werkt. Mijn passie? Strategie, design en code samenbrengen tot één
+            krachtige website.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Bij elk project denk ik mee als partner — niet als leverancier. Korte
+            lijnen, eerlijk advies en een resultaat waar we samen trots op zijn.
+          </p>
+          <Button asChild className="mt-8 rounded-full bg-gradient-accent">
+            <Link to="/contact">Plan een kennismaking</Link>
+          </Button>
+        </div>
       </div>
     </section>
 
