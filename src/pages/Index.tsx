@@ -261,6 +261,41 @@ const Home = () => {
         </div>
       </section>
 
+      {/* OVER ONS */}
+      <section className="section-pad bg-surface-soft">
+        <div className="container-tight grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -inset-6 bg-gradient-accent opacity-20 blur-3xl rounded-full" />
+            <img
+              src={portraitFounder}
+              alt="Oprichter van Lenovate Studio"
+              width={1024}
+              height={1280}
+              loading="lazy"
+              className="relative rounded-2xl shadow-elegant border border-border w-full object-cover aspect-[4/5]"
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <span className="eyebrow">Over ons</span>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">
+              Eén aanspreekpunt, <span className="gradient-text">volle focus</span>.
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Bij Lenovate Studio krijg je geen anonieme accountmanager, maar een
+              vaste partner die jouw project van A tot Z begeleidt. Strategie,
+              design en development — alles onder één dak.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Korte lijnen, eerlijk advies en een resultaat waar we samen trots
+              op zijn. Dat is de belofte.
+            </p>
+            <Link to="/over-ons" className="mt-8 inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
+              Leer ons kennen <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="ink-section">
         <div className="container-tight py-20 md:py-28 text-center">
