@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { projects, posts, reviews } from "@/data/content";
 import heroVisual from "@/assets/hero-visual.jpg";
+import portraitFounder from "@/assets/portrait-founder.jpg";
 
 const Home = () => {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
