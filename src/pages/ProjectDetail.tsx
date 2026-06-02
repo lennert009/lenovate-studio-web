@@ -46,7 +46,6 @@ const ProjectDetail = () => {
           <Link to="/projecten" className="inline-flex items-center gap-2 text-ink-muted hover:text-ink-foreground text-sm mb-8">
             <ArrowLeft className="h-4 w-4" /> Alle projecten
           </Link>
-          <span className="eyebrow">{project.category}</span>
           <h1 className="mt-5 font-display text-5xl md:text-6xl font-bold leading-[1.05]">
             {project.title}
           </h1>
@@ -63,6 +62,9 @@ const ProjectDetail = () => {
               <p className="text-xs uppercase tracking-widest text-ink-muted">Categorie</p>
               <p className="mt-1 font-semibold">{project.category}</p>
             </div>
+          </div>
+          <div className="mt-8">
+            <span className="eyebrow">{project.category}</span>
           </div>
         </div>
       </section>
