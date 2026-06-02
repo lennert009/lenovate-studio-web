@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Heart, Lightbulb, Rocket } from "lucide-react";
+import portraitFounder from "@/assets/portrait-founder.jpg";
 
 const OverOns = () => (
   <Layout>
