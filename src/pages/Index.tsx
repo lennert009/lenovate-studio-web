@@ -3,13 +3,15 @@ import { ArrowRight, ArrowUpRight, Zap, Smartphone, Search, Target, Star, CheckC
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { projects, posts, reviews } from "@/data/content";
+import { projects, reviews } from "@/data/content";
+import { useWpPosts } from "@/hooks/useWpPosts";
 import heroVisual from "@/assets/hero-visual.jpg";
 import portraitFounder from "@/assets/portrait-founder.jpg";
 
 const Home = () => {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
-  const latestPosts = posts.slice(0, 3);
+  const { data: latestPosts = [] } = useWpPosts(3);
+
 
   return (
     <Layout>
@@ -267,19 +269,23 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-6">
             {latestPosts.map((p) => (
               <Link
-                key={p.slug}
+                key={p.id}
                 to={`/blog/${p.slug}`}
                 className="group block rounded-2xl overflow-hidden border border-border bg-card hover:shadow-elegant transition-all hover:-translate-y-1"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-muted">
-                  <img
-                    src={p.cover}
-                    alt={p.title}
-                    width={1024}
-                    height={640}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {p.cover ? (
+                    <img
+                      src={p.cover}
+                      alt={p.coverAlt}
+                      width={1024}
+                      height={640}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="h-full w-full" style={{ background: "var(--gradient-hero)" }} aria-hidden />
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 text-xs text-muted-foreground">
@@ -292,6 +298,7 @@ const Home = () => {
                 </div>
               </Link>
             ))}
+
           </div>
         </div>
       </section>
