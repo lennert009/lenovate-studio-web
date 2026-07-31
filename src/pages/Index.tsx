@@ -3,13 +3,15 @@ import { ArrowRight, ArrowUpRight, Zap, Smartphone, Search, Target, Star, CheckC
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-import { projects, posts, reviews } from "@/data/content";
+import { projects, reviews } from "@/data/content";
+import { useWpPosts } from "@/hooks/useWpPosts";
 import heroVisual from "@/assets/hero-visual.jpg";
 import portraitFounder from "@/assets/portrait-founder.jpg";
 
 const Home = () => {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
-  const latestPosts = posts.slice(0, 3);
+  const { data: latestPosts = [] } = useWpPosts(3);
+
 
   return (
     <Layout>
